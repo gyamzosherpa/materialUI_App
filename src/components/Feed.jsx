@@ -1,6 +1,6 @@
-import { Box, Stack, Skeleton } from "@mui/material";
-import React, { useState } from "react";
-import Post from "./Post";
+import { Box, Stack, Skeleton } from '@mui/material';
+import React, { useState } from 'react';
+import Post from './Post';
 
 const Feed = () => {
   const [loading, setLoading] = useState(true);

@@ -9,8 +9,8 @@ import {
   TextField,
   Tooltip,
   Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+} from '@mui/material';
+import React, { useState } from 'react';
 import {
   Add as AddIcon,
   DateRange,
@@ -18,20 +18,20 @@ import {
   Image,
   PersonAdd,
   VideoCameraBack,
-} from "@mui/icons-material";
-import { Box } from "@mui/system";
+} from '@mui/icons-material';
+import { Box } from '@mui/system';
 
 const SytledModal = styled(Modal)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 });
 
 const UserBox = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  marginBottom: "20px",
+  display: 'flex',
+  alignItems: 'center',
+  gap: '10px',
+  marginBottom: '20px',
 });
 
 const Add = () => {
@@ -42,9 +42,9 @@ const Add = () => {
         onClick={(e) => setOpen(true)}
         title="Delete"
         sx={{
-          position: "fixed",
+          position: 'fixed',
           bottom: 20,
-          left: { xs: "calc(50% - 25px)", md: 30 },
+          left: { xs: 'calc(50% - 25px)', md: 30 },
         }}
       >
         <Fab color="primary" aria-label="add">
@@ -60,8 +60,8 @@ const Add = () => {
         <Box
           width={400}
           height={280}
-          bgcolor={"background.default"}
-          color={"text.primary"}
+          bgcolor={'background.default'}
+          color={'text.primary'}
           p={3}
           borderRadius={5}
         >
@@ -77,14 +77,16 @@ const Add = () => {
               John Doe
             </Typography>
           </UserBox>
+
           <TextField
-            sx={{ width: "100%" }}
+            sx={{ width: '100%' }}
             id="standard-multiline-static"
             multiline
             rows={3}
             placeholder="What's on your mind?"
             variant="standard"
           />
+
           <Stack direction="row" gap={1} mt={2} mb={3}>
             <EmojiEmotions color="primary" />
             <Image color="secondary" />
@@ -97,7 +99,7 @@ const Add = () => {
             aria-label="outlined primary button group"
           >
             <Button>Post</Button>
-            <Button sx={{ width: "100px" }}>
+            <Button sx={{ width: '100px' }}>
               <DateRange />
             </Button>
           </ButtonGroup>

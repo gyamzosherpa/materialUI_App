@@ -11,6 +11,8 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
+
+import PageviewIcon from '@mui/icons-material/Pageview';
 import React, { useState } from 'react';
 
 const StyledToolbar = styled(Toolbar)({
@@ -19,7 +21,8 @@ const StyledToolbar = styled(Toolbar)({
 });
 
 const Search = styled('div')(({ theme }) => ({
-  backgroundColor: 'white',
+  display: 'flex',
+  background: '#9FC088',
   padding: '0 10px',
   borderRadius: theme.shape.borderRadius,
   width: '40%',
@@ -42,10 +45,10 @@ const UserBox = styled(Box)(({ theme }) => ({
     display: 'none',
   },
 }));
-const Navbar = ({ darkTheme }) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: '#06113C' }}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: 'none', sm: 'block' } }}>
           GYamzo
@@ -53,8 +56,18 @@ const Navbar = ({ darkTheme }) => {
         <Pets sx={{ display: { xs: 'block', sm: 'none' } }} />
 
         <Search>
-          <InputBase placeholder="search..." />
+          <InputBase placeholder="search..." color="" />
+          <PageviewIcon
+            sx={{
+              position: 'relative',
+              left: '515px',
+              mt: '2px',
+              color: 'black',
+              fontSize: '35px',
+            }}
+          />
         </Search>
+
         <Icons>
           <Badge badgeContent={4} color="error">
             <Mail />
